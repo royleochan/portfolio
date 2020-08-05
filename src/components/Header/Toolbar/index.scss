@@ -1,0 +1,65 @@
+@import "styles/variables.scss";
+
+.toolbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 10vh;
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:active {
+    color: $primary-brown-1;
+  }
+
+  .toolbar__left-icon {
+    padding: 0 3rem;
+  }
+
+  .toolbar__navigation {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 1rem;
+    justify-content: space-between;
+
+    .toolbar__logo {
+      p {
+        color: $primary-brown-1;
+        font-weight: $font-semibold;
+      }
+    }
+  }
+
+  .toolbar_navigation-items {
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+
+      li {
+        padding: 0 1.8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .toolbar_navigation-items {
+    display: none;
+  }
+  .toolbar__left-icon {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .toolbar__toggle-button {
+    display: none;
+  }
+}
