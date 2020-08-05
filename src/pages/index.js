@@ -1,5 +1,30 @@
-import React from "react"
+import React, { useState } from "react"
 
-export default function Home() {
-  return <div>Hello world!</div>
+import Toolbar from "components/Header/Toolbar/Toolbar.jsx"
+import Footer from "components/Footer/Footer.jsx"
+import Backdrop from "components/Backdrop/Backdrop.jsx"
+import SideDrawer from "components/Header/SideDrawer/SideDrawer.jsx"
+
+const About = props => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
+
+  const toggleDrawer = () => {
+    setIsDrawerOpen(!isDrawerOpen)
+  }
+
+  const backdropClickHandler = () => {
+    toggleDrawer()
+  }
+
+  return (
+    <div style={{ height: "100%" }}>
+      <Toolbar openDrawer={toggleDrawer} />
+      {isDrawerOpen && <SideDrawer show={isDrawerOpen} />}
+      {isDrawerOpen && <Backdrop click={backdropClickHandler} />}
+      <main style={{ marginTop: "6rem" }}></main>
+      <Footer />
+    </div>
+  )
 }
+
+export default About
