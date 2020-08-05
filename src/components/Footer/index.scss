@@ -1,0 +1,39 @@
+@import "styles/variables.scss";
+
+.footer {
+  background-color: $primary-black-1;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .icon-container {
+    display: flex;
+    justify-content: space-between;
+    width: 10rem;
+    padding-right: 5rem;
+
+    .icon {
+      font-size: 2rem;
+    }
+
+    .icon:hover {
+      color: $primary-brown-1;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    justify-content: center;
+
+    .icon-container {
+      padding-right: 0rem;
+    }
+  }
+}
