@@ -6,7 +6,7 @@ import "./index.scss"
 import Hamburger from "components/Header/Hamburger/Hamburger.jsx"
 
 const Toolbar = props => {
-  const { openDrawer } = props
+  const { openDrawer, page } = props
 
   return (
     <header className="toolbar">
@@ -14,10 +14,12 @@ const Toolbar = props => {
         <div className="toolbar__toggle-button">
           <Hamburger click={openDrawer} />
         </div>
-        <Link className="toolbar__left-icon" to="/">
-          <p>About</p>
-        </Link>
-        <div className="toolbar__logo">
+        <div className="toolbar__left-icon">
+          <Link activeClassName="toolbar__left-icon-active" to="/">
+            <p>About</p>
+          </Link>
+        </div>
+        <div className={`toolbar__logo-${page}`}>
           <p>Roy Chan</p>
         </div>
         <div className="toolbar_navigation-items">
@@ -37,8 +39,8 @@ const Toolbar = props => {
                 <p>Projects</p>
               </Link>
             </li>
-            <li>
-              <Link to="/contact/">
+            <li className="contact">
+              <Link to="/contact/" activeClassName="contact-link">
                 <p>Contact</p>
               </Link>
             </li>

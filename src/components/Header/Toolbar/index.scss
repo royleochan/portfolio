@@ -5,19 +5,13 @@
   width: 100%;
   top: 0;
   left: 0;
-  height: 10vh;
+  height: 9vh;
+  background-color: $primary-white-1;
 
   a {
+    color: $primary-black-1;
+    font-size: 1.2rem;
     text-decoration: none;
-  }
-
-  a:hover,
-  a:active {
-    color: $primary-brown-1;
-  }
-
-  .toolbar__left-icon {
-    padding: 0 3rem;
   }
 
   .toolbar__navigation {
@@ -27,9 +21,30 @@
     padding: 0 1rem;
     justify-content: space-between;
 
-    .toolbar__logo {
+    .toolbar__left-icon {
+      padding: 0 3rem;
+
+      a:hover {
+        color: $primary-brown-1;
+      }
+    }
+
+    .toolbar__left-icon-active {
+      p {
+        border-bottom: 2px solid $primary-brown-1;
+      }
+    }
+
+    .toolbar__logo-about {
       p {
         color: $primary-brown-1;
+        font-weight: $font-semibold;
+      }
+    }
+
+    .toolbar__logo-contact {
+      p {
+        color: $primary-blue-1;
         font-weight: $font-semibold;
       }
     }
@@ -42,14 +57,26 @@
       padding: 0;
       display: flex;
 
+      .contact {
+        a:hover {
+          color: $primary-blue-1;
+        }
+      }
+
       li {
         padding: 0 1.8rem;
+
+        .contact-link {
+          p {
+            border-bottom: 2px solid $primary-blue-1;
+          }
+        }
       }
     }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 959px) {
   .toolbar_navigation-items {
     display: none;
   }
@@ -58,7 +85,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 959px) {
   .toolbar__toggle-button {
     display: none;
   }
