@@ -1,0 +1,72 @@
+@import "styles/variables.scss";
+
+.page {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .main {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header {
+    width: 50%;
+    padding-bottom: 1rem;
+
+    h1 {
+      color: $primary-blue-1;
+    }
+  }
+
+  form {
+    height: 58vh;
+    width: 50%;
+    padding: 1rem 1rem 1rem 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px 1px #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    input {
+      outline: none;
+      width: 100%;
+      font-size: medium;
+      margin-top: 1rem;
+      border: none;
+      border-bottom: 1px solid $primary-black-1;
+    }
+
+    textarea {
+      outline: none;
+      width: 100%;
+      height: 5rem;
+      font-size: medium;
+      margin-top: 1rem;
+      resize: none;
+      border-bottom: 1px solid $primary-black-1;
+    }
+
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      width: 95%;
+    }
+
+    p {
+      color: #bf1650;
+    }
+
+    p::before {
+      display: inline;
+      content: "⚠ ";
+    }
+  }
+}
