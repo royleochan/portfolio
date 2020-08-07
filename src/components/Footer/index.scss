@@ -2,15 +2,13 @@
 
 .footer {
   background-color: $primary-black-1;
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
   color: white;
   height: 7vh;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-top: auto;
 
   .icon-container {
     display: flex;
@@ -18,17 +16,25 @@
     width: 10rem;
     padding-right: 5rem;
 
-    .icon {
+    .icon-about {
       font-size: 2rem;
     }
 
-    .icon:hover {
+    .icon-about:hover {
       color: $primary-brown-1;
+    }
+
+    .icon-contact {
+      font-size: 2rem;
+    }
+
+    .icon-contact:hover {
+      color: $primary-blue-1;
     }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 959px) {
   .footer {
     justify-content: center;
 
