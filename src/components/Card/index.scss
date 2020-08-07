@@ -1,0 +1,44 @@
+@import "styles/variables.scss";
+
+.card-container {
+  height: 38vh;
+  width: 50vh;
+  background-color: $primary-white-1;
+  box-shadow: 0 2px 5px 1px #e5e5e5;
+  overflow-y: auto;
+
+  .title-container {
+    padding: 1.5rem 0 0 2rem;
+  }
+
+  .body-container {
+    display: flex;
+    padding: 1rem 0 0 0;
+
+    .react-title {
+      color: #61dafb;
+    }
+
+    .node-title {
+      color: #61ac49;
+    }
+
+    .mongo-title {
+      color: #8e714e;
+    }
+
+    .django-title {
+      color: #092e20;
+    }
+
+    .figma-title {
+      color: #a160fb;
+    }
+  }
+
+  .image {
+    width: 4.5rem;
+    height: 2.5rem;
+    padding-right: 1rem;
+  }
+}
