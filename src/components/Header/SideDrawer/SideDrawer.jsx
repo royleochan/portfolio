@@ -10,12 +10,16 @@ const SideDrawer = props => {
   return (
     <nav className={drawerClasses}>
       <ul>
-        <Link className="toolbar__left-icon" to="/">
-          <p>About</p>
-        </Link>
-        <Link to="/education/">
-          <p>Education</p>
-        </Link>
+        <li>
+          <Link to="/">
+            <p>About</p>
+          </Link>
+        </li>
+        <li>
+          <Link to="/education/">
+            <p>Education</p>
+          </Link>
+        </li>
         <li>
           <Link to="/experience/">
             <p>Experience</p>
