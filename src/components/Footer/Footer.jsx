@@ -8,8 +8,6 @@ import LinkedInIcon from "@ant-design/icons/LinkedinOutlined"
 import GithubIcon from "@ant-design/icons/GithubOutlined"
 
 const Footer = props => {
-  const { page } = props
-
   const clickHandler = url => {
     window.open(url, "_blank")
   }
@@ -19,21 +17,21 @@ const Footer = props => {
       <footer>
         <div className="icon-container">
           <GithubIcon
-            className={`icon-${page}`}
+            className="icon"
             onClick={() => clickHandler("https://github.com/royleochan")}
           />
           <LinkedInIcon
-            className={`icon-${page}`}
+            className="icon"
             onClick={() =>
               clickHandler("https://www.linkedin.com/in/roy-chan-579124176/")
             }
           />
           <InstagramIcon
-            className={`icon-${page}`}
+            className="icon"
             onClick={() => clickHandler("https://www.instagram.com/leoroyy/")}
           />
           <FacebookIcon
-            className={`icon-${page}`}
+            className="icon"
             onClick={() => clickHandler("https://www.facebook.com/royXDXD")}
           />
         </div>
