@@ -81,7 +81,7 @@ const Contact = props => {
           </Button>
         </form>
       </main>
-      <Footer page="contact" />
+      <Footer />
     </div>
   )
 }

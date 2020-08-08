@@ -66,7 +66,7 @@ const About = props => {
           </Grid>
         </div>
       </main>
-      <Footer page="about" />
+      <Footer />
     </div>
   )
 }
