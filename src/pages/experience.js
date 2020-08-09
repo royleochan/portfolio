@@ -19,7 +19,7 @@ const Experience = props => {
   return (
     <div style={{ height: "100%" }}>
       <Toolbar openDrawer={toggleDrawer} />
-      {isDrawerOpen && <SideDrawer show={isDrawerOpen} />}
+      {<SideDrawer show={isDrawerOpen} />}
       {isDrawerOpen && <Backdrop click={backdropClickHandler} />}
       <main style={{ marginTop: "6rem" }}>
         <h1>Experience</h1>

@@ -11,7 +11,7 @@ import Toolbar from "components/Header/Toolbar/Toolbar.jsx"
 import Footer from "components/Footer/Footer.jsx"
 import Backdrop from "components/Backdrop/Backdrop.jsx"
 import SideDrawer from "components/Header/SideDrawer/SideDrawer.jsx"
-import Card from "components/Card/Card.jsx"
+import Card from "components/Card/BasicCard/Card.jsx"
 
 const About = props => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
@@ -25,9 +25,9 @@ const About = props => {
   }
 
   return (
-    <div className="page">
+    <div className="about-page">
       <Toolbar openDrawer={toggleDrawer} page="about" />
-      {isDrawerOpen && <SideDrawer show={isDrawerOpen} />}
+      {<SideDrawer show={isDrawerOpen} />}
       {isDrawerOpen && <Backdrop click={backdropClickHandler} />}
       <main style={{ marginTop: "6rem", overflow: "hidden" }}>
         <div>
@@ -54,10 +54,24 @@ const About = props => {
               </div>
               <Grid container spacing={3}>
                 <div className="grid">
-                  <Grid item xs={12} sm={12} md={6} lg={6}>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={12}
+                    md={6}
+                    lg={6}
+                    className="interest-grid"
+                  >
                     <Card title="Interests" body={INTERESTS} type="interest" />
                   </Grid>
-                  <Grid item xs={12} sm={12} md={6} lg={6}>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={12}
+                    md={6}
+                    lg={6}
+                    className="skill-grid"
+                  >
                     <Card title="Skills" body={SKILLS} type="skill" />
                   </Grid>
                 </div>

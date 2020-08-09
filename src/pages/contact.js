@@ -27,9 +27,9 @@ const Contact = props => {
   }
 
   return (
-    <div className="page">
+    <div className="contact-page">
       <Toolbar openDrawer={toggleDrawer} page="contact" />
-      {isDrawerOpen && <SideDrawer show={isDrawerOpen} />}
+      {<SideDrawer show={isDrawerOpen} />}
       {isDrawerOpen && <Backdrop click={backdropClickHandler} />}
       <main className="main">
         <div className="header">

@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 
+import "styles/pages/projects.scss"
+
 import Toolbar from "components/Header/Toolbar/Toolbar.jsx"
 import Footer from "components/Footer/Footer.jsx"
 import Backdrop from "components/Backdrop/Backdrop.jsx"
@@ -17,9 +19,9 @@ const Projects = props => {
   }
 
   return (
-    <div style={{ height: "100%" }}>
+    <div className="projects-page">
       <Toolbar openDrawer={toggleDrawer} />
-      {isDrawerOpen && <SideDrawer show={isDrawerOpen} />}
+      {<SideDrawer show={isDrawerOpen} />}
       {isDrawerOpen && <Backdrop click={backdropClickHandler} />}
       <main style={{ marginTop: "6rem" }}>
         <h1>Projects</h1>
