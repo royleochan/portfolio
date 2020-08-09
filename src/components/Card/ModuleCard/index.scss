@@ -1,0 +1,22 @@
+@import "styles/variables.scss";
+
+.module-card-container {
+  height: 38vh;
+  width: 30vh;
+  background-color: $primary-white-1;
+  box-shadow: 0 2px 5px 1px #e5e5e5;
+  overflow-y: auto;
+
+  .title-container {
+    padding: 0rem 0 0 1rem;
+
+    h4 {
+      color: $primary-orange-1;
+    }
+  }
+
+  .body-container {
+    display: flex;
+    padding: 1rem 0 0 0;
+  }
+}
