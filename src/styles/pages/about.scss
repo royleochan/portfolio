@@ -1,11 +1,32 @@
 @import "styles/variables.scss";
 
-.page {
+.about-page {
   min-height: 100vh;
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.interest-grid {
+  animation: fadein 2s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+.skill-grid {
+  animation: fadein 2s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
 }
 
 h3 {
@@ -17,6 +38,7 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  animation: fadein 2s;
 }
 
 .grid {
