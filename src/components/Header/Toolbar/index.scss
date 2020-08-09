@@ -48,6 +48,13 @@
         font-weight: $font-semibold;
       }
     }
+
+    .toolbar__logo-education {
+      p {
+        color: $primary-orange-1;
+        font-weight: $font-semibold;
+      }
+    }
   }
 
   .toolbar_navigation-items {
@@ -63,12 +70,24 @@
         }
       }
 
+      .education {
+        a:hover {
+          color: $primary-orange-1;
+        }
+      }
+
       li {
         padding: 0 1.8rem;
 
         .contact-link {
           p {
             border-bottom: 2px solid $primary-blue-1;
+          }
+        }
+
+        .education-link {
+          p {
+            border-bottom: 2px solid $primary-orange-1;
           }
         }
       }

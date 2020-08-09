@@ -24,8 +24,8 @@ const Toolbar = props => {
         </div>
         <div className="toolbar_navigation-items">
           <ul>
-            <li>
-              <Link to="/education/">
+            <li className="education">
+              <Link to="/education/" activeClassName="education-link">
                 <p>Education</p>
               </Link>
             </li>
