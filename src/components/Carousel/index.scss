@@ -1,0 +1,29 @@
+@import "styles/variables.scss";
+
+.carousel-container {
+  width: 30rem;
+  height: 100%;
+  // z-index: 1;
+
+  .swapit-poster {
+    width: 17rem;
+    height: 34rem;
+  }
+
+  .image {
+    width: 17rem;
+    height: 34rem;
+  }
+
+  .image-cover {
+    width: 21rem;
+    height: 34rem;
+  }
+
+  .icon:hover {
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+
