@@ -1,0 +1,29 @@
+@import "styles/variables.scss";
+
+.experience-page {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .timeline {
+    margin-bottom: 1.5rem;
+  }
+
+  .vertical-timeline-element--work .vertical-timeline-element-content {
+    border-top: 3px solid $primary-green-1;
+  }
+
+  .vertical-timeline-element--education .vertical-timeline-element-content {
+    border-top: 3px solid $primary-purple-1;
+  }
+
+  .vertical-timeline-element-date {
+    color: $primary-black-1;
+  }
+
+  .timeline:before {
+    background: $primary-grey-1;
+  }
+}
