@@ -1,4 +1,12 @@
 import React, { useState } from "react"
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component"
+import "react-vertical-timeline-component/style.min.css"
+
+import "styles/pages/experience.scss"
+import EXPERIENCE from "src/data/experience"
 
 import Toolbar from "components/Header/Toolbar/Toolbar.jsx"
 import Footer from "components/Footer/Footer.jsx"
@@ -16,13 +24,29 @@ const Experience = props => {
     toggleDrawer()
   }
 
+  const getTimelineElements = () =>
+    EXPERIENCE.map(experience => (
+      <VerticalTimelineElement {...experience.props}>
+        <h3 className="vertical-timeline-element-title">{experience.title}</h3>
+        <h4 className="vertical-timeline-element-subtitle">
+          {experience.subtitle}
+        </h4>
+        <p>{experience.content}</p>
+      </VerticalTimelineElement>
+    ))
+
   return (
-    <div style={{ height: "100%" }}>
-      <Toolbar openDrawer={toggleDrawer} />
+    <div className="experience-page">
+      <Toolbar openDrawer={toggleDrawer} page="experience" />
       {<SideDrawer show={isDrawerOpen} />}
       {isDrawerOpen && <Backdrop click={backdropClickHandler} />}
-      <main style={{ marginTop: "6rem" }}>
-        <h1>Experience</h1>
+      <main
+        style={{ marginTop: "6rem", display: "flex", flexDirection: "column" }}
+      >
+        <h3 style={{ alignSelf: "center" }}>Experience</h3>
+        <VerticalTimeline className="timeline">
+          {getTimelineElements()}
+        </VerticalTimeline>
       </main>
       <Footer />
     </div>
