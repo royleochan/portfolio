@@ -9,7 +9,7 @@ import GithubIcon from "@ant-design/icons/GithubOutlined"
 
 const Footer = props => {
   const clickHandler = url => {
-    if (window !== "undefined") {
+    if (typeof window !== "undefined") {
       window.open(url, "_blank")
     }
   }
