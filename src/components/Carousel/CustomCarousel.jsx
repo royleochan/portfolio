@@ -17,8 +17,12 @@ const CustomCarousel = props => {
   const { images, cover } = props
   const [value, setValue] = useState(0)
 
-  const slides = images.map(image => <img src={image} className="image" />)
-  slides.unshift(<img src={cover} className="image-cover" />)
+  const slides = images.map(image => (
+    <img src={image} className="image" alt="cover" />
+  ))
+  slides.unshift(
+    <img src={cover} className="image-cover" alt="project pictures" />
+  )
 
   const onChange = value => {
     setValue(value)
