@@ -10,7 +10,9 @@ const ModuleCard = props => {
         <h4>{title}</h4>
         {body.map(module => (
           <div>
-            <p>• {module.moduleCode}:</p>
+            <p>
+              <strong>{module.moduleCode}</strong>
+            </p>
             <p>{module.title}</p>
           </div>
         ))}
