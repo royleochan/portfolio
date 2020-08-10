@@ -1,7 +1,8 @@
 import React, { useState } from "react"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import "styles/pages/about.scss"
-import ProfilePicture from "src/assets/images/roy.png"
 import INTERESTS from "src/data/interests"
 import SKILLS from "src/data/skills"
 
@@ -14,6 +15,7 @@ import SideDrawer from "components/Header/SideDrawer/SideDrawer.jsx"
 import Card from "components/Card/BasicCard/Card.jsx"
 
 const About = props => {
+  console.log(props.data)
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
 
   const toggleDrawer = () => {
@@ -34,7 +36,7 @@ const About = props => {
           <Grid container spacing={1}>
             <Grid item xs={12} sm={12} md={4} lg={4}>
               <div className="image-container">
-                <img src={ProfilePicture} alt="roy" className="image" />
+                <Img fixed={props.data.imageOne.childImageSharp.fixed} />
               </div>
             </Grid>
             <Grid item xs={12} sm={12} md={8} lg={8}>
@@ -86,3 +88,15 @@ const About = props => {
 }
 
 export default About
+
+export const query = graphql`
+  query {
+    imageOne: file(relativePath: { eq: "roy.png" }) {
+      childImageSharp {
+        fixed(width: 360, height: 520) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
