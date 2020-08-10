@@ -7,6 +7,7 @@
   left: 0;
   height: 9vh;
   background-color: $primary-white-1;
+  z-index: 2;
 
   a {
     color: $primary-black-1;
@@ -55,6 +56,20 @@
         font-weight: $font-semibold;
       }
     }
+
+    .toolbar__logo-projects {
+      p {
+        color: $primary-pink-1;
+        font-weight: $font-semibold;
+      }
+    }
+
+    .toolbar__logo-experience {
+      p {
+        color: $primary-green-1;
+        font-weight: $font-semibold;
+      }
+    }
   }
 
   .toolbar_navigation-items {
@@ -76,6 +91,18 @@
         }
       }
 
+      .projects {
+        a:hover {
+          color: $primary-pink-1;
+        }
+      }
+
+      .experience {
+        a:hover {
+          color: $primary-green-1;
+        }
+      }
+
       li {
         padding: 0 1.8rem;
 
@@ -88,6 +115,18 @@
         .education-link {
           p {
             border-bottom: 2px solid $primary-orange-1;
+          }
+        }
+
+        .projects-link {
+          p {
+            border-bottom: 2px solid $primary-pink-1;
+          }
+        }
+
+        .experience-link {
+          p {
+            border-bottom: 2px solid $primary-green-1;
           }
         }
       }
