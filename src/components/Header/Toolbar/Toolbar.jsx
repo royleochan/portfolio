@@ -29,13 +29,13 @@ const Toolbar = props => {
                 <p>Education</p>
               </Link>
             </li>
-            <li>
-              <Link to="/experience/">
+            <li className="experience">
+              <Link to="/experience/" activeClassName="experience-link">
                 <p>Experience</p>
               </Link>
             </li>
-            <li>
-              <Link to="/projects/">
+            <li className="projects">
+              <Link to="/projects/" activeClassName="projects-link">
                 <p>Projects</p>
               </Link>
             </li>
