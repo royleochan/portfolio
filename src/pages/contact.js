@@ -13,6 +13,7 @@ import SideDrawer from "components/Header/SideDrawer/SideDrawer.jsx"
 const Contact = props => {
   const { register, handleSubmit, errors } = useForm()
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
+  const [state, setState] = useState({})
 
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen)
@@ -22,8 +23,23 @@ const Contact = props => {
     toggleDrawer()
   }
 
-  const onSubmit = data => {
-    console.log(data)
+  const handleChange = e => {
+    setState({ ...state, [e.target.name]: e.target.value })
+  }
+
+  const onSubmit = e => {
+    e.preventDefault()
+    const form = e.target
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...state,
+      }),
+    })
+      .then(() => navigate(form.getAttribute("action")))
+      .catch(error => alert(error))
   }
 
   return (
@@ -40,10 +56,28 @@ const Contact = props => {
             simply wish to connect, feel free to get in touch as well.
           </p>
         </div>
-        <form>
+        <form
+          name="contact"
+          method="post"
+          action="/thanks/"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <label>
+              Don’t fill this out:{" "}
+              <input name="bot-field" onChange={handleChange} />
+            </label>
+          </p>
           <div className="input-container">
             <label htmlFor="name">Name</label>
-            <input id="name" name="name" ref={register({ required: true })} />
+            <input
+              id="name"
+              name="name"
+              ref={register({ required: true })}
+              onChange={handleChange}
+            />
             {errors.name && <p>Required</p>}
           </div>
           <div className="input-container">
@@ -51,6 +85,7 @@ const Contact = props => {
             <input
               id="email"
               name="email"
+              onChange={handleChange}
               ref={register({
                 required: "Required",
                 pattern: {
@@ -66,6 +101,7 @@ const Contact = props => {
             <textarea
               id="message"
               name="message"
+              onChange={handleChange}
               ref={register({ required: true })}
             ></textarea>
 
