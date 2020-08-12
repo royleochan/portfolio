@@ -26,7 +26,7 @@ const Experience = props => {
 
   const getTimelineElements = () =>
     EXPERIENCE.map(experience => (
-      <VerticalTimelineElement {...experience.props}>
+      <VerticalTimelineElement key={experience.date} {...experience.props}>
         <h3 className="vertical-timeline-element-title">{experience.title}</h3>
         <h4 className="vertical-timeline-element-subtitle">
           {experience.subtitle}
