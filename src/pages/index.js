@@ -15,7 +15,6 @@ import SideDrawer from "components/Header/SideDrawer/SideDrawer.jsx"
 import Card from "components/Card/BasicCard/Card.jsx"
 
 const About = props => {
-  console.log(props.data)
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
 
   const toggleDrawer = () => {
@@ -44,13 +43,16 @@ const About = props => {
                 <div className="about-container">
                   <p>
                     Year 2 Student at{" "}
-                    <p className="university-text">
+                    <span className="university-text">
                       National University of Singapore
-                    </p>
+                    </span>
                   </p>
                   <p>
-                    Double Degree in <h3>Computer Science</h3> (Home) and{" "}
-                    <h3>Business Administration</h3> (Second)
+                    Double Degree in{" "}
+                    <span className="header-text">Computer Science</span> (Home)
+                    and{" "}
+                    <span className="header-text">Business Administration</span>{" "}
+                    (Second)
                   </p>
                 </div>
               </div>

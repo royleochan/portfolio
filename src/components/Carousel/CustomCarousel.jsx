@@ -1,11 +1,6 @@
 import React from "react"
-import "react-responsive-carousel/lib/styles/carousel.min.css" // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel } from "react-responsive-carousel"
-
-import Right from "@ant-design/icons/RightOutlined"
-import DoubleRight from "@ant-design/icons/DoubleRightOutlined"
-import Left from "@ant-design/icons/LeftOutlined"
-import DoubleLeft from "@ant-design/icons/DoubleLeftOutlined"
 
 import "./index.scss"
 
