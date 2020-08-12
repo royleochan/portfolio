@@ -34,9 +34,8 @@ const Contact = props => {
     setState({ ...state, [e.target.name]: e.target.value })
   }
 
-  const onSubmit = e => {
-    console.log(e)
-    console.log(state)
+  const submitHandler = (data, e) => {
+    e.preventDefault()
     const form = e.target
     fetch("/", {
       method: "POST",
@@ -70,6 +69,7 @@ const Contact = props => {
           action="/thanks/"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit(submitHandler)}
         >
           <input type="hidden" name="form-name" value="contact" />
           <p hidden>
@@ -116,10 +116,10 @@ const Contact = props => {
             {errors.message && <p>Required</p>}
           </div>
           <Button
+            type="submit"
             variant="contained"
             color="primary"
             endIcon={<Icon>send</Icon>}
-            onClick={handleSubmit(onSubmit)}
           >
             Submit
           </Button>
