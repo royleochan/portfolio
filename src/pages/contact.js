@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { navigate } from "gatsby-link"
 import { useForm } from "react-hook-form"
 import Button from "@material-ui/core/Button"
 import Icon from "@material-ui/core/Icon"
@@ -9,6 +10,12 @@ import Toolbar from "components/Header/Toolbar/Toolbar.jsx"
 import Footer from "components/Footer/Footer.jsx"
 import Backdrop from "components/Backdrop/Backdrop.jsx"
 import SideDrawer from "components/Header/SideDrawer/SideDrawer.jsx"
+
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
 
 const Contact = props => {
   const { register, handleSubmit, errors } = useForm()
@@ -28,7 +35,8 @@ const Contact = props => {
   }
 
   const onSubmit = e => {
-    e.preventDefault()
+    console.log(e)
+    console.log(state)
     const form = e.target
     fetch("/", {
       method: "POST",
