@@ -15,6 +15,7 @@ import SideDrawer from "components/Header/SideDrawer/SideDrawer.jsx"
 import Card from "components/Card/BasicCard/Card.jsx"
 
 const About = props => {
+  console.log(props.data)
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
 
   const toggleDrawer = () => {
@@ -33,9 +34,12 @@ const About = props => {
       <main style={{ marginTop: "6rem", overflow: "hidden" }}>
         <div>
           <Grid container spacing={1}>
-            <Grid item xs={12} sm={12} md={4} lg={4}>
+            <Grid item xs={12} sm={12} md={4} lg={4} className="grid">
               <div className="image-container">
-                <Img fixed={props.data.imageOne.childImageSharp.fixed} />
+                <Img
+                  fluid={props.data.imageOne.childImageSharp.fluid}
+                  alt="profile"
+                />
               </div>
             </Grid>
             <Grid item xs={12} sm={12} md={8} lg={8}>
@@ -95,8 +99,8 @@ export const query = graphql`
   query {
     imageOne: file(relativePath: { eq: "roy.png" }) {
       childImageSharp {
-        fixed(width: 360, height: 520) {
-          ...GatsbyImageSharpFixed
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }

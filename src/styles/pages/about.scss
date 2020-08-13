@@ -9,12 +9,13 @@
 
   .interest-grid {
     animation: fadein 2s;
+    animation-delay: 1s;
     animation-fill-mode: both;
   }
 
   .skill-grid {
     animation: fadein 2s;
-    animation-delay: 1s;
+    animation-delay: 2s;
     animation-fill-mode: both;
   }
 
@@ -38,14 +39,9 @@
   }
 
   .image-container {
-    display: flex;
-    justify-content: center;
     animation: fadein 2s;
-
-    .image {
-      width: 360px;
-      height: 520px;
-    }
+    width: 360px;
+    height: 520px;
   }
 
   .about-container {
