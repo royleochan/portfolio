@@ -15,7 +15,8 @@ const EXPERIENCE = [
     },
     title: "Software Engineering Intern",
     subtitle: "Zumata",
-    content: "Technologies used: Dialogflow, React, ElasticSearch",
+    content:
+      "As a intern in the company's chatbot development team, my highlights include writing a script to automise the deletion of chatbot intents, designing a credit card advisory chatbot for my product manager from scratch, as well as improving chat widget front end appearance for a better user experience. Technologies used: Dialogflow, React, ElasticSearch",
   },
   {
     props: {
@@ -28,7 +29,8 @@ const EXPERIENCE = [
     },
     title: "Machine Learning Department",
     subtitle: "NUS Fintech Society",
-    content: "Technologies used: React, python",
+    content:
+      "Tried implementing an ARIMA Model for time series analysis. Also collaborated with other members on a project with SmartKarma. Took on the role of a frontend developer using React.js & ReCharts library to display results of sentiment analysis. Technologies used: React, python",
   },
   {
     props: {
@@ -41,7 +43,8 @@ const EXPERIENCE = [
     },
     title: "Full Stack Developer Intern",
     subtitle: "With.Network",
-    content: "Technologies used: React, Sass, Django and Django Rest Framework",
+    content:
+      "During my time as a full stack intern at this startup, I mainly developed reusable user interface components using React and extended existing RESTful API functionality using the Django framework. Main features I was building include a CRM feature as well as a feature to allow users to connect with each other. Technologies used: React, Sass, Django and Django Rest Framework",
   },
   {
     props: {
