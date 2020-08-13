@@ -34,7 +34,7 @@ const About = props => {
       <main style={{ marginTop: "6rem", overflow: "hidden" }}>
         <div>
           <Grid container spacing={1}>
-            <Grid item xs={12} sm={12} md={4} lg={4} className="grid">
+            <Grid item xs={12} sm={12} md={4} lg={4} className="picture-grid">
               <div className="image-container">
                 <Img
                   fluid={props.data.imageOne.childImageSharp.fluid}
