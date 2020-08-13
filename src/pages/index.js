@@ -56,7 +56,7 @@ const About = props => {
                   </p>
                 </div>
               </div>
-              <Grid container spacing={3}>
+              <Grid container spacing={1}>
                 <div className="grid">
                   <Grid
                     item
