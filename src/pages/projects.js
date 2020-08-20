@@ -34,7 +34,8 @@ const Projects = props => {
           <h3>SwapIt</h3>
           <p>
             Developed under{" "}
-            <a href="https://orbital.comp.nus.edu.sg/">NUS Orbital Program</a>
+            <a href="https://orbital.comp.nus.edu.sg/">NUS Orbital Program</a>{" "}
+            (Artemis Level)
           </p>
           <p>
             SwapIt is a <strong>mobile application</strong> that provides a
@@ -50,11 +51,6 @@ const Projects = props => {
             <Img fixed={props.data.imageOne.childImageSharp.fixed} />
           </div>
           <p>Relevant Links:</p>
-          <p>
-            <a href="https://docs.google.com/document/d/1chrL4JLxz66Sx-4t_-V4l6zm9a8ldaegJzKWPPCtcUM/edit?usp=sharing">
-              Detailed Documentation
-            </a>
-          </p>
           <p>
             <a href="https://youtu.be/8fiWyNYucwk">Video Demo</a>
           </p>

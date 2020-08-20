@@ -16,7 +16,7 @@ const EXPERIENCE = [
     title: "Software Engineering Intern",
     subtitle: "Zumata",
     content:
-      "As a intern in the company's chatbot development team, my highlights include writing a script to automise the deletion of chatbot intents, designing a credit card advisory chatbot for my product manager from scratch, as well as improving chat widget front end appearance for a better user experience. Technologies used: Dialogflow, React, ElasticSearch",
+      "As an intern in the company's chatbot development team, my highlights include writing a script to automise the deletion of chatbot intents, designing a credit card advisory chatbot which my product manager used to pitch to potential clients, as well as improving chat widget front end appearance for a better user experience. Technologies used: Dialogflow, React, ElasticSearch",
   },
   {
     props: {
@@ -44,7 +44,7 @@ const EXPERIENCE = [
     title: "Full Stack Developer Intern",
     subtitle: "With.Network",
     content:
-      "During my time as a full stack intern at this startup, I mainly developed reusable user interface components using React and extended existing RESTful API functionality using the Django framework. Main features I was building include a CRM feature as well as a feature to allow users to connect with each other. Technologies used: React, Sass, Django and Django Rest Framework",
+      "During my time as a full stack intern at this startup, I mainly developed reusable user interface components using React and extended existing RESTful API functionality using the Django framework. Main features I was building include a CRM console with a drag and drop feature as well as a feature to allow users to connect with each other. Technologies used: React, Sass, Django and Django Rest Framework",
   },
   {
     props: {
