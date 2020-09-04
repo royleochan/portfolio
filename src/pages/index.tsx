@@ -8,21 +8,20 @@ import SKILLS from "src/data/skills"
 
 import Grid from "@material-ui/core/Grid"
 
-import Toolbar from "components/Header/Toolbar/Toolbar.jsx"
-import Footer from "components/Footer/Footer.jsx"
-import Backdrop from "components/Backdrop/Backdrop.jsx"
-import SideDrawer from "components/Header/SideDrawer/SideDrawer.jsx"
-import Card from "components/Card/BasicCard/Card.jsx"
+import Toolbar from "src/components/Header/Toolbar/Toolbar"
+import Footer from "src/components/Footer/Footer"
+import Backdrop from "src/components/Backdrop/Backdrop"
+import SideDrawer from "src/components/Header/SideDrawer/SideDrawer"
+import Card from "src/components/Card/BasicCard/Card"
 
-const About = props => {
-  console.log(props.data)
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
+const About = (props: any) => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false)
 
-  const toggleDrawer = () => {
+  const toggleDrawer: () => void = () => {
     setIsDrawerOpen(!isDrawerOpen)
   }
 
-  const backdropClickHandler = () => {
+  const backdropClickHandler: () => void = () => {
     toggleDrawer()
   }
 

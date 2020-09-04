@@ -3,9 +3,14 @@ import { Link } from "gatsby"
 
 import "./index.scss"
 
-import Hamburger from "components/Header/Hamburger/Hamburger.jsx"
+import Hamburger from "src/components/Header/Hamburger/Hamburger"
 
-const Toolbar = props => {
+interface Props {
+  page: string
+  openDrawer: () => void
+}
+
+const Toolbar: React.FC<Props> = props => {
   const { openDrawer, page } = props
 
   return (

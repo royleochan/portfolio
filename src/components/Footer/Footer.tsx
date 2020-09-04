@@ -7,8 +7,8 @@ import FacebookIcon from "@ant-design/icons/FacebookOutlined"
 import LinkedInIcon from "@ant-design/icons/LinkedinOutlined"
 import GithubIcon from "@ant-design/icons/GithubOutlined"
 
-const Footer = props => {
-  const clickHandler = url => {
+const Footer: React.FC = Props => {
+  const clickHandler = (url: string) => {
     if (typeof window !== "undefined") {
       window.open(url, "_blank")
     }

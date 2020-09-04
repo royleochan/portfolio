@@ -2,7 +2,13 @@ import React from "react"
 
 import "./index.scss"
 
-const Card = props => {
+interface Props<T> {
+  title: string
+  body: Array<T>
+  type: string
+}
+
+const Card: React.FC<Props<any>> = props => {
   const { title, body, type } = props
   const isInterest = type === "interest"
   const isSkill = type === "skill"

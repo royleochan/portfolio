@@ -1,4 +1,4 @@
-const INTERESTS = [
+const INTERESTS: string[] = [
   "Full stack software engineering",
   "Web Development",
   "Mobile Development",

@@ -2,7 +2,11 @@ import React from "react"
 
 import "./index.scss"
 
-const Backdrop = props => {
+interface Props {
+  click: () => void
+}
+
+const Backdrop: React.FC<Props> = props => {
   const { click } = props
 
   return (
@@ -11,7 +15,7 @@ const Backdrop = props => {
       onClick={click}
       onKeyPress={click}
       role="button"
-      tabIndex="0"
+      tabIndex={0}
       aria-label="backdrop"
     ></div>
   )

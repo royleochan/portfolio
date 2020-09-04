@@ -2,7 +2,11 @@ import React from "react"
 
 import "./index.scss"
 
-const Hamburger = props => {
+interface Props {
+  click: () => void
+}
+
+const Hamburger: React.FC<Props> = props => {
   const { click } = props
 
   return (

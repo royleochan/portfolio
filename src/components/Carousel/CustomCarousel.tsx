@@ -4,7 +4,12 @@ import { Carousel } from "react-responsive-carousel"
 
 import "./index.scss"
 
-const CustomCarousel = props => {
+interface Props {
+  images: Array<string>
+  cover: string
+}
+
+const CustomCarousel: React.FC<Props> = props => {
   const { images, cover } = props
 
   const slides = images.map(image => (

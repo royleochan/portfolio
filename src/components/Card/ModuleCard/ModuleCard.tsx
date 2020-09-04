@@ -1,8 +1,15 @@
 import React from "react"
 
+import Module from "src/models/module"
+
 import "./index.scss"
 
-const ModuleCard = props => {
+interface props {
+  title: string
+  body: Array<Module>
+}
+
+const ModuleCard: React.FC<props> = props => {
   const { title, body } = props
   return (
     <div className="module-card-container">

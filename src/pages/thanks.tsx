@@ -2,19 +2,19 @@ import React, { useState } from "react"
 
 import "styles/pages/thanks.scss"
 
-import Toolbar from "components/Header/Toolbar/Toolbar.jsx"
-import Footer from "components/Footer/Footer.jsx"
-import Backdrop from "components/Backdrop/Backdrop.jsx"
-import SideDrawer from "components/Header/SideDrawer/SideDrawer.jsx"
+import Toolbar from "src/components/Header/Toolbar/Toolbar"
+import Footer from "src/components/Footer/Footer"
+import Backdrop from "src/components/Backdrop/Backdrop"
+import SideDrawer from "src/components/Header/SideDrawer/SideDrawer"
 
-const Thanks = props => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
+const Thanks: React.FC = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false)
 
-  const toggleDrawer = () => {
+  const toggleDrawer: () => void = () => {
     setIsDrawerOpen(!isDrawerOpen)
   }
 
-  const backdropClickHandler = () => {
+  const backdropClickHandler: () => void = () => {
     toggleDrawer()
   }
 

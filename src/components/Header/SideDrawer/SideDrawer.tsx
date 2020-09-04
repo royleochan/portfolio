@@ -3,7 +3,11 @@ import { Link } from "gatsby"
 
 import "./index.scss"
 
-const SideDrawer = props => {
+interface Props {
+  show: boolean
+}
+
+const SideDrawer: React.FC<Props> = props => {
   const { show } = props
   const drawerClasses = show ? "side-drawer open" : "side-drawer"
 

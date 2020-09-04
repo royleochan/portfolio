@@ -1,6 +1,6 @@
 import Module from "src/models/module"
 
-const MODULES = [
+const MODULES: Module[] = [
   new Module("CS1010X", "Programming Methodology", "CS", "Y1SP", 1),
   new Module("BPM1701", "Calculus and Statistics", "BIZ", "Y1S1", 1),
   new Module(

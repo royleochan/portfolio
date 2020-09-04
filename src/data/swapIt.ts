@@ -5,7 +5,7 @@ import SwapItProfile from "src/assets/images/swapit-profile.png"
 import SwapItMessaging from "src/assets/images/swapit-messaging.png"
 import SwapItFilter from "src/assets/images/swapit-filter.png"
 
-const SWAPIT = [
+const SWAPIT: ImageSmoothingQuality[] = [
   SwapItSignupOne,
   SwapItSignupTwo,
   SwapItTinder,

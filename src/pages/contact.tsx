@@ -6,35 +6,48 @@ import Icon from "@material-ui/core/Icon"
 
 import "styles/pages/contact.scss"
 
-import Toolbar from "components/Header/Toolbar/Toolbar.jsx"
-import Footer from "components/Footer/Footer.jsx"
-import Backdrop from "components/Backdrop/Backdrop.jsx"
-import SideDrawer from "components/Header/SideDrawer/SideDrawer.jsx"
+import Toolbar from "src/components/Header/Toolbar/Toolbar"
+import Footer from "src/components/Footer/Footer"
+import Backdrop from "src/components/Backdrop/Backdrop"
+import SideDrawer from "src/components/Header/SideDrawer/SideDrawer"
 
-const encode = data => {
+interface FormData {
+  name: string
+  email: string
+  message: string
+}
+
+const encode = (data: any) => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&")
 }
 
-const Contact = props => {
-  const { register, handleSubmit, errors } = useForm()
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
-  const [state, setState] = useState({})
+const Contact: React.FC = () => {
+  const { register, handleSubmit, errors } = useForm<
+    Record<string, any>,
+    object
+  >()
+  const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false)
+  const [state, setState] = useState<FormData | {}>({})
 
-  const toggleDrawer = () => {
+  const toggleDrawer: () => void = () => {
     setIsDrawerOpen(!isDrawerOpen)
   }
 
-  const backdropClickHandler = () => {
+  const backdropClickHandler: () => void = () => {
     toggleDrawer()
   }
 
-  const handleChange = e => {
+  const handleChange = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
     setState({ ...state, [e.target.name]: e.target.value })
   }
 
-  const submitHandler = (data, e) => {
+  const submitHandler = (data: any, e: any) => {
     e.preventDefault()
     const form = e.target
     fetch("/", {

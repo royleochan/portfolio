@@ -4,26 +4,37 @@ import Grid from "@material-ui/core/Grid"
 import "styles/pages/education.scss"
 import MODULES from "src/data/modules"
 
-import Toolbar from "components/Header/Toolbar/Toolbar.jsx"
-import Footer from "components/Footer/Footer.jsx"
-import Backdrop from "components/Backdrop/Backdrop.jsx"
-import SideDrawer from "components/Header/SideDrawer/SideDrawer.jsx"
-import ModuleCard from "components/Card/ModuleCard/ModuleCard.jsx"
+import Toolbar from "src/components/Header/Toolbar/Toolbar"
+import Footer from "src/components/Footer/Footer"
+import Backdrop from "src/components/Backdrop/Backdrop"
+import SideDrawer from "src/components/Header/SideDrawer/SideDrawer"
+import ModuleCard from "src/components/Card/ModuleCard/ModuleCard"
 import NusLogo from "src/assets/images/nus_logo.png"
+import Module from "@/models/module"
 
-const Education = props => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
-  const computingMods = MODULES.filter(module => module.type === "CS")
-  const mathMods = MODULES.filter(module => module.type === "MA")
-  const bizMods = MODULES.filter(module => module.type === "BIZ")
-  const geMods = MODULES.filter(module => module.type === "GE")
-  const commsMods = MODULES.filter(module => module.type === "COM")
+const Education: React.FC = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false)
+  const computingMods: Array<Module> = MODULES.filter(
+    (module: Module) => module.type === "CS"
+  )
+  const mathMods: Array<Module> = MODULES.filter(
+    (module: Module) => module.type === "MA"
+  )
+  const bizMods: Array<Module> = MODULES.filter(
+    (module: Module) => module.type === "BIZ"
+  )
+  const geMods: Array<Module> = MODULES.filter(
+    (module: Module) => module.type === "GE"
+  )
+  const commsMods: Array<Module> = MODULES.filter(
+    (module: Module) => module.type === "COM"
+  )
 
-  const toggleDrawer = () => {
+  const toggleDrawer: () => void = () => {
     setIsDrawerOpen(!isDrawerOpen)
   }
 
-  const backdropClickHandler = () => {
+  const backdropClickHandler: () => void = () => {
     toggleDrawer()
   }
 

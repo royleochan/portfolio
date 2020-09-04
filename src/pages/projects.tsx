@@ -6,20 +6,20 @@ import "styles/pages/projects.scss"
 import SWAPIT from "src/data/swapIt"
 import SwapItPoster from "src/assets/images/swapit-poster.jpg"
 
-import Toolbar from "components/Header/Toolbar/Toolbar.jsx"
-import Footer from "components/Footer/Footer.jsx"
-import Backdrop from "components/Backdrop/Backdrop.jsx"
-import SideDrawer from "components/Header/SideDrawer/SideDrawer.jsx"
-import CustomCarousel from "components/Carousel/CustomCarousel.jsx"
+import Toolbar from "src/components/Header/Toolbar/Toolbar"
+import Footer from "src/components/Footer/Footer"
+import Backdrop from "src/components/Backdrop/Backdrop"
+import SideDrawer from "src/components/Header/SideDrawer/SideDrawer"
+import CustomCarousel from "src/components/Carousel/CustomCarousel"
 
-const Projects = props => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
+const Projects: React.FC = (props: any) => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false)
 
-  const toggleDrawer = () => {
+  const toggleDrawer: () => void = () => {
     setIsDrawerOpen(!isDrawerOpen)
   }
 
-  const backdropClickHandler = () => {
+  const backdropClickHandler: () => void = () => {
     toggleDrawer()
   }
 
