@@ -55,9 +55,10 @@ const EXPERIENCE = [
       iconStyle: { background: "rgb(161, 96, 251)", color: "#fff" },
       icon: <SchoolIcon />,
     },
-    title: "Dev Ops Department",
+    title: "Technical Lead",
     subtitle: "NUS Fintech Society",
-    content: "",
+    content:
+      "Leading a team of 5 developers in the DevOps department to build a new NUS Fintech Society website which will replace the current wix site. The team is in charge of desiging the UI/UX as well as implementing the site. Technologies used: React, NextJS, Sass",
   },
 ]
 
