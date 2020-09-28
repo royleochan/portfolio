@@ -30,7 +30,7 @@ const About = (props: any) => {
       <Toolbar openDrawer={toggleDrawer} page="about" />
       {<SideDrawer show={isDrawerOpen} />}
       {isDrawerOpen && <Backdrop click={backdropClickHandler} />}
-      <main style={{ marginTop: "6rem", overflow: "hidden" }}>
+      <main className="about-main">
         <div>
           <Grid container spacing={1}>
             <Grid item xs={12} sm={12} md={4} lg={4} className="picture-grid">
